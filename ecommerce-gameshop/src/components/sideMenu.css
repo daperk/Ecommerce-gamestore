@@ -88,3 +88,26 @@
 .sideMenu .social li .share:hover {
     background: var(--primary);
 }
+
+.sideMenu.active {
+    width: 7%;
+    transition: 1s;
+    overflow: hidden;
+    align-items: center;
+}
+
+.sideMenu.active .brand,
+.sideMenu.active .navName{
+    display: none;
+}
+
+.sideMenu.active .nav li a{
+    font-size: 1.8rem;
+}
+
+.sideMenu.active .social{
+    padding: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}

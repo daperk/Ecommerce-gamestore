@@ -31,3 +31,9 @@ main {
         5px 5px 15px rgba(255, 255, 255, 0.35);
     transition: 1s;
 }
+
+.banner.active{
+    width: 93%;
+    position: relative;
+    transition: 1s;
+}
