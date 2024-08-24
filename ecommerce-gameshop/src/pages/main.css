@@ -4,7 +4,7 @@ main {
     left: 0;
     right: 0;
     bottom: 0;
-    padding: 30px;
+    padding: 25px;
     border: 8px solid var(--bgColor);
     background-color: var(--bgColor);
     box-shadow:
@@ -36,4 +36,27 @@ main {
     width: 93%;
     position: relative;
     transition: 1s;
+}
+
+section {
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    top: 100vh;
+    padding: 0 30px 0 30px;
+    bottom: 0;
+    opacity: 0;
+    transition: ease-in-out 1s;
+    transform-origin: bottom;
+    z-index: 1000;
+}
+
+section::-webkit-scrollbar {
+    display: none;
+}
+section.active{
+    top: 100px;
+    height: auto;
+    overflow: visible;
+    opacity: 1;
 }

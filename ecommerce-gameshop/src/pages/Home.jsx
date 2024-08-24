@@ -1,17 +1,38 @@
-import GameSwiper from '../components/GameSwiper'
-import './home.css'
-import React from 'react'
+import GameCard from "../components/GameCard";
+import GameSwiper from "../components/GameSwiper";
+import "./home.css";
+import React from "react";
 
-function Home({games}) {
+function Home({ games }) {
   return (
-    <section id='home' className='home'>
-        <div className="container-fluid">
-            <div className="row">
-                <GameSwiper games={games} />
-            </div>
+    <section id="home" className="home active">
+      <div className="container-fluid">
+        <div className="row mb-4">
+          <GameSwiper games={games}/>
         </div>
+        <div className="row">
+          <div className="col-lg-6">
+            <h2 className="sectionTitle">Games on promotion</h2>
+          </div>
+          <div className="col-lg-6 d-flex justify-content-end align-items-center">
+            <a href="" className="viewMore">
+              View More games <i className="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+        <div className="row">
+          {
+            games.slice(0, 4).map(game => (
+              <div className="col-xl-3 col-lg-4 col-md-6" key={game._id}>
+                <GameCard game={game} />
+              </div>
+            ))
+          }
+        </div>
+      </div>
+
     </section>
-  )
+  );
 }
 
-export default Home
+export default Home;
