@@ -3,9 +3,9 @@ import GameSwiper from "../components/GameSwiper";
 import "./home.css";
 import React from "react";
 
-function Home({ games }) {
+function Home({ games, reference }) {
   return (
-    <section id="home" className="home active">
+    <section id="home" className="home active" ref={reference}>
       <div className="container-fluid">
         <div className="row mb-4">
           <GameSwiper games={games}/>
