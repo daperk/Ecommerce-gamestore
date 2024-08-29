@@ -1,7 +1,15 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './shopBagItem.css'
+import { AppContext } from '../App'
 
 function ShopBagItem({ game, index }) {
+
+    const {myBag, setMyBag} = useContext(AppContext);
+
+    const handleRemoveFromBag = game => {
+        setMyBag(myBag.filter(item => item._id !== game._id));
+    };
+
     return (
         <tr className="shopBagItem">
             <th scope='row'>{index + 1}</th>
@@ -11,7 +19,7 @@ function ShopBagItem({ game, index }) {
             <td>{game.discount * 100}%</td>
             <td>${(game.price * (1 - game.discount)).toFixed(2)}</td>
             <td>
-                <a href="">
+                <a href="#" onClick={()=> handleRemoveFromBag(game)}>
                     <i class="bi bi-trash3-fill"></i>
                 </a>
             </td>

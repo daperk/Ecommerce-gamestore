@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import profileImg from '../images/01my.png'
 import '../pages/header.css'
+import { AppContext } from '../App';
 
 function Header({handleToggle}) {
+    const { library, myBag} = useContext(AppContext);
+
   return (
     <header>
         <a href="#" className="menu" onClick={handleToggle}>
@@ -11,11 +14,11 @@ function Header({handleToggle}) {
         <div className="userItems">
             <a href="#" className="icon">
             <i class="bi bi-suit-heart-fill"></i>
-            <span className="like">0</span>
+            <span className="like">{library.length}</span>
             </a>
             <a href="#" className="icon">
             <i class="bi bi-bag-fill"></i>
-            <span className="bag">0</span>
+            <span className="bag">{myBag.length}</span>
             </a>
             <div className="avatar">
                 <a href="">

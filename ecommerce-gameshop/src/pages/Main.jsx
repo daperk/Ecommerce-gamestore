@@ -72,7 +72,7 @@ function Main() {
   }, [])
 
   useEffect(() => {
-    console.log("myBag:", myBag); // Debugging myBag state
+    console.log("myBag:", myBag); 
   }, [myBag]);
 
   return (
