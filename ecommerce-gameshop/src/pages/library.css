@@ -1,0 +1,29 @@
+.games{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;    
+    padding: 15px;
+    box-sizing: border-box;
+    max-height: 600px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--second) var(--bgColor);
+}
+.games::-webkit-scrollbar {
+    width: 12px;
+}
+
+.games::-webkit-scrollbar-track {
+    background: var(--bgColor);
+    border-radius: 10px;
+}
+
+.games::-webkit-scrollbar-thumb {
+    background: var(--second); 
+    border-radius: 10px;
+    transition: background 0.3s;
+}
+
+.games::-webkit-scrollbar-thumb:hover {
+    background: var(--primary); 
+}

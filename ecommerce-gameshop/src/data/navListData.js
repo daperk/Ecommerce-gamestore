@@ -22,7 +22,7 @@ const navListData = [
     },
     {
         _id:4,
-        target: 'bag',
+        target: 'myBag',
         name: 'My Bag',
         icon:'bi-bag',
         active: false,
