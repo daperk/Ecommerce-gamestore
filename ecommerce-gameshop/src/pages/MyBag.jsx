@@ -14,7 +14,7 @@ function MyBag({ games, reference }) {
   
   useEffect(() => {
     setTotal(handleTotalPayment());
-  }, [games]);
+  }, [games, handleTotalPayment]);
 
   return (
     <section id="myBag" className="myBag" ref={reference} >
