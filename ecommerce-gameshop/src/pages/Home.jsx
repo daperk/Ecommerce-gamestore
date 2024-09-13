@@ -7,7 +7,7 @@ function Home({ games, reference }) {
   return (
     <section id="home" className="home active" ref={reference}>
       <div className="container-fluid">
-        <div className="row mb-4">
+        <div className="row mb-2">
           <GameSwiper games={games}/>
         </div>
         <div className="row">
@@ -24,7 +24,9 @@ function Home({ games, reference }) {
           {
             games.slice(0, 4).map(game => (
               <div className="col-xl-3 col-lg-4 col-md-6" key={game._id}>
+                <div className="games">
                 <GameCard game={game} />
+                </div>
               </div>
             ))
           }

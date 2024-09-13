@@ -54,7 +54,7 @@
     padding: 15px;
     box-sizing: border-box;
     max-height: 600px;
-    overflow-y: auto;
+    overflow: hidden;
     scrollbar-width: thin;
     scrollbar-color: var(--second) var(--bgColor);
 }

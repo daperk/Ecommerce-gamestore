@@ -30,6 +30,8 @@ main {
     box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1),
         5px 5px 15px rgba(255, 255, 255, 0.35);
     transition: 1s;
+    overflow: hidden;
+    
 }
 
 .banner.active{
@@ -57,6 +59,6 @@ section::-webkit-scrollbar {
 section.active{
     top: 100px;
     height: auto;
-    overflow: visible;
+    overflow: hidden;
     opacity: 1;
 }

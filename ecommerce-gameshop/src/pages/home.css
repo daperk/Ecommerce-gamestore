@@ -1,6 +1,9 @@
 section.home, .sectionTitle{
     text-transform: uppercase;
 }
+section.home{
+    top: 70px;
+}
 
 .viewMore {
     text-decoration: none;
@@ -11,4 +14,8 @@ section.home, .sectionTitle{
 
 .viewMore:hover{
     color: var(--second);
+}
+
+.games{
+    width: 100%;
 }
